@@ -61,7 +61,7 @@
                     </tr></tbody>
                 </table>
                 <p style="text-align: center;font-size: 13px;">
-                    Powered by <a target="_blank" href="https://www.odoo.com?utm_source=db&amp;utm_medium=expense" style="color: #9E588B;">Odoo</a>.
+                    Powered by <a target="_blank" href="https://www.odoo.com?utm_source=db&amp;utm_medium=expense" style="color: #9E588B;">Skoola</a>.
                 </p>
             </div>
         </template>

@@ -900,7 +900,7 @@ class IrMail_Server(models.Model):
                     return mail_server
 
         # 1. Try to find a mail server for the right mail from
-        # Skip if passed email_from is False (example Odoobot has no email address)
+        # Skip if passed email_from is False (example OdooBot has no email address)
         if email_from_normalized:
             if mail_server := first_match(email_from_normalized, email_normalize):
                 return mail_server, email_from

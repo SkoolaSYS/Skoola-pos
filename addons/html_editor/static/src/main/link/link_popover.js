@@ -15,7 +15,7 @@ import { cleanZWChars, deduceURLfromText } from "./utils";
 import { useColorPicker } from "@web/core/color_picker/color_picker";
 import { CheckBox } from "@web/core/checkbox/checkbox";
 
-const DEFAULT_CUSTOM_TEXT_COLOR = "#714B67";
+const DEFAULT_CUSTOM_TEXT_COLOR = "#19387A";
 const DEFAULT_CUSTOM_FILL_COLOR = "#ffffff";
 
 const isCSSVariable = (color) => color.match(/^o-color-\d$|^\d{3}$/);

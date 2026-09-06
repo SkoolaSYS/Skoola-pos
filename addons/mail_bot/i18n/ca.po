@@ -160,8 +160,8 @@ msgstr "Estat de l'OdooBot"
 
 #. module: mail_bot
 #: model:ir.model.fields,field_description:mail_bot.field_res_users__odoobot_failed
-msgid "Odoobot Failed"
-msgstr "Odoobot ha fallat"
+msgid "OdooBot Failed"
+msgstr "OdooBot ha fallat"
 
 #. module: mail_bot
 #: model:ir.model.fields.selection,name:mail_bot.selection__res_users__odoobot_state__onboarding_attachement
@@ -386,7 +386,7 @@ msgstr "Comença el recorregut"
 
 #~ msgid ""
 #~ "Sorry, I am not listening. To get someone's attention, <b>ping him</b>. "
-#~ "Write <span class=\"o_odoobot_command\">@OdooBot</span> and select me."
+#~ "Write <span class=\"o_odoobot_command\">@odoobot</span> and select me."
 #~ msgstr ""
 #~ "Ho sento, no estic escoltant. Per cridar l'atenció d'algú,<b>ping a ell</"
 #~ "b>. Escriu <span class=\"o_odoobot_command\">@OdooBot</span> i "

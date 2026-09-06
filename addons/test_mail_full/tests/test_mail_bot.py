@@ -7,7 +7,7 @@ from odoo.tools import mute_logger
 
 
 @tagged("odoobot")
-class TestOdoobot(MailCommon, TestRecipients):
+class TestOdooBotBot(MailCommon, TestRecipients):
 
     @classmethod
     def setUpClass(cls):
@@ -43,7 +43,7 @@ class TestOdoobot(MailCommon, TestRecipients):
                 sender=self.odoobot,
                 answer=False
             )
-        # Odoobot should not be a follower but user_employee and user_admin should
+        # OdooBot should not be a follower but user_employee and user_admin should
         follower = self.test_record.message_follower_ids.mapped('partner_id')
         self.assertNotIn(self.odoobot, follower)
         self.assertIn(self.user_employee.partner_id, follower)
@@ -110,7 +110,7 @@ class TestOdoobot(MailCommon, TestRecipients):
     @mute_logger('odoo.addons.mail.models.mail_mail')
     def test_odoobot_no_default_answer(self):
         kwargs = self.message_post_default_kwargs.copy()
-        kwargs.update({'body': "I'm not talking to @odoobot right now", 'partner_ids': []})
+        kwargs.update({'body': "I'm not talking to @OdooBot right now", 'partner_ids': []})
         self.assertNextMessage(
             self.test_record_employe.message_post(**kwargs),
             answer=False

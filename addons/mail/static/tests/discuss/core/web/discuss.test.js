@@ -168,8 +168,8 @@ test("Chat is pinned on other tabs when joined", async () => {
 });
 
 test("Auto-open OdooBot chat when opening discuss for the first time", async () => {
-    // Odoobot chat has onboarding for using Discuss app.
-    // We assume pinned odoobot chat without any message seen means user just started using Discuss app.
+    // OdooBot chat has onboarding for using Discuss app.
+    // We assume pinned OdooBot chat without any message seen means user just started using Discuss app.
     const pyEnv = await startServer();
     pyEnv["discuss.channel"].create({
         channel_member_ids: [

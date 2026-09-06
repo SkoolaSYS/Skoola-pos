@@ -116,7 +116,7 @@ function pathFromActionState(state) {
 }
 
 export function startUrl() {
-    return isScopedApp() ? "scoped_app" : "odoo";
+    return isScopedApp() ? "scoped_app" : "skoola";
 }
 
 /**
@@ -185,7 +185,7 @@ function urlToState(urlObj) {
 
     const [prefix, ...splitPath] = urlObj.pathname.split("/").filter(Boolean);
 
-    if (["odoo", "scoped_app"].includes(prefix)) {
+    if (["skoola", "scoped_app"].includes(prefix)) {
         const actionParts = [...splitPath.entries()].filter(
             ([_, part]) => !isNumeric(part) && part !== "new"
         );
@@ -322,13 +322,13 @@ browser.addEventListener("click", (ev) => {
         }
         if (
             browser.location.host === url.host &&
-            browser.location.pathname.startsWith("/odoo") &&
-            (["/web", "/odoo"].includes(url.pathname) || url.pathname.startsWith("/odoo/")) &&
+            browser.location.pathname.startsWith("/skoola") &&
+            (["/web", "/skoola"].includes(url.pathname) || url.pathname.startsWith("/skoola/")) &&
             a.target !== "_blank"
         ) {
             ev.preventDefault();
             state = router.urlToState(url);
-            if (url.pathname.startsWith("/odoo") && url.hash) {
+            if (url.pathname.startsWith("/skoola") && url.hash) {
                 browser.history.pushState({}, "", url.href);
             }
             new Promise((res) => setTimeout(res, 0)).then(() => routerBus.trigger("ROUTE_CHANGE"));

@@ -13,41 +13,15 @@ Before starting, make sure you have:
 * Git
 * Python 3.12.x
 * PostgreSQL 16
-* Odoo 19.0 source code
 * Internet connection
 
-> **Important:** Odoo 19 requires a compatible Python environment. This guide uses **Python 3.12.11**.
+> **Important:** Skoola POS requires a compatible Python environment. This guide uses **Python 3.12.11**.
 
 ---
 
-# 2. Get the Odoo Source Code
+# 2. Get the Skoola POS Source Code
 
 If you have not cloned the project yet:
-
-```bash
-git clone https://github.com/odoo/odoo.git
-cd odoo
-```
-
-Switch to Odoo 19:
-
-```bash
-git checkout 19.0
-```
-
-Verify:
-
-```bash
-git branch --show-current
-```
-
-Expected:
-
-```text
-19.0
-```
-
----
 
 # 🍎 macOS Setup
 
@@ -111,7 +85,7 @@ brew install xz
 pyenv install 3.12.11
 ```
 
-Set it for the Odoo project:
+Set it for the skoola POS project:
 
 ```bash
 pyenv local 3.12.11
@@ -145,7 +119,7 @@ LZMA OK
 
 ## 7. Create the Python Virtual Environment
 
-From the Odoo directory:
+From the Skoola POS directory:
 
 ```bash
 python -m venv .venv
@@ -408,7 +382,7 @@ Exit:
 
 ---
 
-# 8. Clone the Odoo Project on Windows
+# 8. Clone the Skoola POS Project on Windows
 
 Open **PowerShell** or **Git Bash**.
 
@@ -416,11 +390,11 @@ Example:
 
 ```powershell
 cd Desktop
-git clone https://github.com/odoo/odoo.git
-cd odoo
+git clone https://github.com/Skoola POS/Skoola POS.git
+cd Skoola POS
 ```
 
-Switch to Odoo 19:
+Switch to Skoola POS 19:
 
 ```powershell
 git checkout 19.0
@@ -442,7 +416,7 @@ Expected:
 
 # 9. Create the Python Virtual Environment
 
-From the Odoo directory:
+From the Skoola POS directory:
 
 ```powershell
 python -m venv .venv
@@ -502,9 +476,9 @@ This ensures the correct virtual environment is being used.
 
 ---
 
-# 11. Install Odoo Dependencies
+# 11. Install Skoola POS Dependencies
 
-From the Odoo root directory:
+From the Skoola POS root directory:
 
 ### macOS
 
@@ -518,15 +492,15 @@ python -m pip install -r requirements.txt
 python -m pip install -r requirements.txt
 ```
 
-This can take some time because Odoo has many Python dependencies.
+This can take some time because Skoola POS has many Python dependencies.
 
 ---
 
-# 12. Configure PostgreSQL for Odoo
+# 12. Configure PostgreSQL for Skoola POS
 
-Odoo needs a PostgreSQL database user.
+Skoola POS needs a PostgreSQL database user.
 
-On both macOS and Windows, you can create an Odoo PostgreSQL user.
+On both macOS and Windows, you can create an Skoola POS PostgreSQL user.
 
 Connect as the PostgreSQL administrator.
 
@@ -542,10 +516,10 @@ psql postgres
 psql -U postgres -h localhost
 ```
 
-Create an Odoo database user:
+Create an Skoola POS database user:
 
 ```sql
-CREATE USER odoo WITH CREATEDB LOGIN PASSWORD 'odoo';
+CREATE USER root WITH CREATEDB LOGIN PASSWORD 'root';
 ```
 
 Then exit:
@@ -558,34 +532,34 @@ Then exit:
 
 ---
 
-# 13. Run Odoo
+# 13. Run Skoola POS
 
 Make sure:
 
 1. PostgreSQL is running
 2. `.venv` is activated
-3. You are inside the Odoo root directory
+3. You are inside the Skoola POS root directory
 
 ### macOS
 
 ```bash
-cd ~/Desktop/projects/odoo
+cd ~/Desktop/projects/Skoola POS
 source .venv/bin/activate
-python odoo-bin
+python Skoola POS-bin
 ```
 
 ### Windows PowerShell
 
 ```powershell
-cd "$HOME\Desktop\odoo"
+cd "$HOME\Desktop\Skoola POS"
 .\.venv\Scripts\Activate.ps1
-python odoo-bin
+python Skoola POS-bin
 ```
 
 A successful startup should show:
 
 ```text
-Odoo version 19.0
+Skoola POS version 19.0
 ```
 
 and:
@@ -596,7 +570,7 @@ HTTP service (werkzeug) running on ...:8069
 
 ---
 
-# 14. Open Odoo
+# 14. Open Skoola POS
 
 Open your browser:
 
@@ -604,7 +578,7 @@ Open your browser:
 http://localhost:8069
 ```
 
-Odoo uses port:
+Skoola POS uses port:
 
 ```text
 8069
@@ -621,17 +595,17 @@ After the initial installation is complete, staff do not need to reinstall every
 ## macOS
 
 ```bash
-cd ~/Desktop/projects/odoo
+cd ~/Desktop/projects/Skoola POS
 source .venv/bin/activate
-python odoo-bin
+python Skoola POS-bin
 ```
 
 ## Windows
 
 ```powershell
-cd "$HOME\Desktop\odoo"
+cd "$HOME\Desktop\Skoola POS"
 .\.venv\Scripts\Activate.ps1
-python odoo-bin
+python Skoola POS-bin
 ```
 
 Then open:
@@ -642,9 +616,9 @@ http://localhost:8069
 
 ---
 
-# 16. Stop Odoo
+# 16. Stop Skoola POS
 
-To stop the Odoo development server:
+To stop the Skoola POS development server:
 
 ```text
 Ctrl + C
@@ -744,7 +718,7 @@ Check:
 python --version
 ```
 
-Odoo development should use:
+Skoola POS development should use:
 
 ```text
 Python 3.12.11
@@ -847,7 +821,7 @@ pg_isready -h localhost -p 5432
 Then:
 
 ```text
-python odoo-bin
+python Skoola POS-bin
 ```
 
 A successful setup should have:
@@ -856,7 +830,7 @@ A successful setup should have:
 Python 3.12.11
 PostgreSQL 16.x
 PostgreSQL accepting connections
-Odoo version 19.0
+Skoola POS version 19.0
 HTTP service running on port 8069
 ```
 
@@ -889,17 +863,17 @@ Once a developer has completed the initial setup:
 ### 🍎 macOS
 
 ```bash
-cd ~/Desktop/projects/odoo
+cd ~/Desktop/projects/Skoola POS
 source .venv/bin/activate
-python odoo-bin
+python Skoola POS-bin
 ```
 
 ### 🪟 Windows
 
 ```powershell
-cd "$HOME\Desktop\odoo"
+cd "$HOME\Desktop\Skoola POS"
 .\.venv\Scripts\Activate.ps1
-python odoo-bin
+python Skoola POS-bin
 ```
 
 Open:
@@ -914,11 +888,11 @@ http://localhost:8069
 
 | Component              | Version                      |
 | ---------------------- | ---------------------------- |
-| Odoo                   | 19.0                         |
+| Skoola POS                   | 19.0                         |
 | Python                 | 3.12.11                      |
 | PostgreSQL             | 16.x                         |
 | Virtual Environment    | `.venv`                      |
-| Odoo Port              | 8069                         |
+| Skoola POS Port              | 8069                         |
 | PostgreSQL Port        | 5432                         |
 | macOS Python Manager   | pyenv                        |
 | Windows Python Manager | python.org installer         |
@@ -933,10 +907,10 @@ This README is intended for **local development**.
 
 It is not a production deployment guide.
 
-For production, Odoo should be configured with appropriate:
+For production, Skoola POS should be configured with appropriate:
 
 * PostgreSQL security
-* Odoo configuration
+* Skoola POS configuration
 * Passwords/secrets
 * Reverse proxy
 * HTTPS

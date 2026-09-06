@@ -96,7 +96,7 @@ test('many2many_avatar_user widget edited by the smart action "Assign to..."', a
     await contains(".o_command", { count: 4 });
     await contains(":nth-child(1 of .o_command)", { text: "Mitchell Admin" });
     await contains(":nth-child(2 of .o_command)", { text: "Public user" });
-    await contains(":nth-child(3 of .o_command)", { text: "OdooBot" });
+    await contains(":nth-child(3 of .o_command)", { text: "odooBot" });
     await contains(":nth-child(4 of .o_command)", { text: "Luigi" });
     await click(".o_command", { text: "Luigi" });
     await contains(".o_tag_badge_text", { count: 3 });

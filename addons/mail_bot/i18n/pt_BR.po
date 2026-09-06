@@ -174,7 +174,7 @@ msgstr "Status do OdooBot"
 
 #. module: mail_bot
 #: model:ir.model.fields,field_description:mail_bot.field_res_users__odoobot_failed
-msgid "Odoobot Failed"
+msgid "OdooBot Failed"
 msgstr "OdooBot falhou"
 
 #. module: mail_bot

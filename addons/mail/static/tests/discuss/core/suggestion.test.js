@@ -311,7 +311,7 @@ test("mention suggestion displays OdooBot before archived partners", async () =>
         before: [
             ".o-mail-Composer-suggestion",
             {
-                text: "OdooBot",
+                text: "odoobot",
                 before: [".o-mail-Composer-suggestion", { text: "Jane" }],
             },
         ],

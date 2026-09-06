@@ -12466,7 +12466,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_mail_bot
 msgid "Add OdooBot in discussions"
-msgstr "Odoobotu müzakirəyə əlavə et"
+msgstr "OdooBotu müzakirəyə əlavə et"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_add_gln

@@ -346,7 +346,7 @@ class TestMailgateway(MailGatewayCommon):
         with self.mock_mail_gateway():
             record4 = self.format_and_process(
                 MAIL_TEMPLATE, odoobot.email_formatted, f'groups@{self.alias_domain}',
-                subject='Odoobot Automatic Answer')
+                subject='OdooBot Automatic Answer')
 
         self.assertEqual(record4.message_ids[0].author_id, odoobot)
         self.assertEqual(record4.message_ids[0].email_from, odoobot.email_formatted)
@@ -518,7 +518,7 @@ class TestMailgateway(MailGatewayCommon):
 
                 self.assertEqual(len(new_messages), 1)
                 self.assertEqual(new_messages.create_uid, self.user_root,
-                                 'Odoobot should be creating the message')
+                                 'OdooBot should be creating the message')
 
                 # Make sure the alias owner is notified if they are a follower
                 self.assertNotified(new_messages, [{

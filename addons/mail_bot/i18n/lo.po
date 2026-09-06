@@ -165,7 +165,7 @@ msgstr "ສະຖານະ OdooBot"
 
 #. module: mail_bot
 #: model:ir.model.fields,field_description:mail_bot.field_res_users__odoobot_failed
-msgid "Odoobot Failed"
+msgid "OdooBot Failed"
 msgstr "OdooBot ຜິດພາດ"
 
 #. module: mail_bot

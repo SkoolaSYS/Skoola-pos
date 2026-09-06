@@ -1100,7 +1100,7 @@ class MailingMailing(models.Model):
         return self._action_send_mail(res_ids)
 
     def _action_send_mail(self, res_ids=None):
-        odoobot = self.env.ref('base.partner_root')
+        OdooBot = self.env.ref('base.partner_root')
         user_partner = self.env.user.partner_id
 
         for mailing in self:
@@ -1116,8 +1116,8 @@ class MailingMailing(models.Model):
                 'auto_delete': not mailing.keep_archives,
                 # email-mode: keep original message for routing
                 'auto_delete_keep_log': mailing.reply_to_mode == 'update',
-                # If current user is odoobot, use mailing responsible (no impact on email_from)
-                'author_id': mailing.user_id.partner_id.id if user_partner == odoobot else user_partner.id,
+                # If current user is OdooBot, use mailing responsible (no impact on email_from)
+                'author_id': mailing.user_id.partner_id.id if user_partner == OdooBot else user_partner.id,
                 'attachment_ids': [(4, attachment.id) for attachment in mailing.attachment_ids],
                 'body': mailing._prepend_preview(mailing.body_html or '', mailing.preview),
                 'composition_mode': 'mass_mail',

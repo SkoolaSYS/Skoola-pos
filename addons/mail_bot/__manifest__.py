@@ -5,7 +5,7 @@
     'name': 'OdooBot',
     'version': '1.2',
     'category': 'Productivity/Discuss',
-    'summary': 'Add OdooBot in discussions',
+    'summary': 'Add odooBot in discussions',
     'website': 'https://www.odoo.com/app/discuss',
     'depends': ['mail'],
     'auto_install': True,

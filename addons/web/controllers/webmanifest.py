@@ -30,7 +30,7 @@ class WebManifest(http.Controller):
             if data:
                 shortcuts.append({
                     'name': module.display_name,
-                    'url': '/odoo?menu_id=%s' % data.mapped('res_id')[0],
+                    'url': '/skoola?menu_id=%s' % data.mapped('res_id')[0],
                     'description': module.summary,
                     'icons': [{
                         'sizes': '100x100',
@@ -44,11 +44,11 @@ class WebManifest(http.Controller):
         web_app_name = request.env['ir.config_parameter'].sudo().get_param('web.web_app_name', 'Odoo')
         manifest = {
             'name': web_app_name,
-            'scope': '/odoo',
-            'start_url': '/odoo',
+            'scope': '/skoola',
+            'start_url': '/skoola',
             'display': 'standalone',
-            'background_color': '#714B67',
-            'theme_color': '#714B67',
+            'background_color': '#19387A',
+            'theme_color': '#19387A',
             'prefer_related_applications': False,
         }
         icon_sizes = ['192x192', '512x512']
@@ -154,8 +154,8 @@ class WebManifest(http.Controller):
             'scope': path,
             'start_url': path,
             'display': 'standalone',
-            'background_color': '#714B67',
-            'theme_color': '#714B67',
+            'background_color': '#19387A',
+            'theme_color': '#19387A',
             'prefer_related_applications': False,
             'shortcuts': self._get_scoped_app_shortcuts(app_id)
         }

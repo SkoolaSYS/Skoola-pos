@@ -863,7 +863,7 @@ class RecipientsNotificationTest(MailCommon):
         """ Test author is added in followers, unless it is archived / odoobot """
         # some automated action post on behalf of author
         test_record = self.env['mail.test.simple'].create({'name': 'Test'})
-        self.partner_root.active = True  # edge case, people activating Odoobot partner (not user)
+        self.partner_root.active = True  # edge case, people activating odoobot partner (not user)
         (self.user_1 + self.user_2).active = False  # archived users should not be subscribed
         self.user_1.partner_id.active = False  # archived authors should not be subscribed
         self.assertFalse(test_record.message_partner_ids)

@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center" t-att-class="{ 'bg-view': order.amount and !order.finalized }">
-                    <div class=" bottom-0 mb-4 d-flex align-items-center ps-3 pe-2 py-1 rounded-3 small">Powered by <OdooLogo style="'width: 3rem;'"/></div>
+                    <div class=" bottom-0 mb-4 d-flex align-items-center ps-3 pe-2 py-1 rounded-3 small">Powered by Skoola</div>
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ class PeppolAuthentication(http.Controller):
             # to avoid showing the accounting settings again (otherwise user will just be redirected
             # to not completed "Register with Peppol" page and will be confused)
             if auth_result == 'pending':
-                return request.redirect('/odoo')
+                return request.redirect('/skoola')
             else:
                 return request.redirect('/odoo/settings/#account')
 

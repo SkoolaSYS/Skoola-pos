@@ -16,7 +16,7 @@ class TestDiscussFullPerformance(HttpCase, MailCommon):
     # Queries for _query_count_init_store (in order):
     #   1: search res_partner (odooot ref exists)
     #   1: search res_groups (internalUserGroupId ref exists)
-    #   10: odoobot format:
+    #   10: OdooBot format:
     #       - fetch res_partner (_read_format)
     #       - search res_users (_compute_im_status)
     #       - search presence (_compute_im_status)

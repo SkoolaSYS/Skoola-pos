@@ -58,9 +58,7 @@
         <xpath expr="//t[@t-out='0']" position="replace">
             <div id="wrapwrap" t-attf-class="#{pageName or ''}">
                 <header t-if="not no_header" id="top" data-anchor="true">
-                    <img class="img-responsive d-block mx-auto"
-                        t-attf-src="/web/binary/company_logo"
-                        alt="Logo"/>
+                    <img src="/web/static/img/logo.png"/>
                 </header>
                 <main>
                     <t t-out="0"/>
@@ -84,20 +82,10 @@
         </xpath>
     </template>
 
-    <template id="brand_promotion_message" name="Brand Promotion Message">
-        <t t-set="odoo_logo">
-            <a target="_blank"
-                t-attf-href="http://www.odoo.com?utm_source=db&amp;utm_medium=#{_utm_medium}"
-                class="badge text-bg-light">
-                <img alt="Odoo"
-                    src="/web/static/img/odoo_logo_tiny.png"
-                    width="62" height="20"
-                    style="width: auto; height: 1em; vertical-align: baseline;"/>
-            </a>
-        </t>
-        <t t-set="final_message">Powered by %s%s</t>
-        <t t-out="final_message % (odoo_logo, _message and ('- ' + _message) or '')"/>
-    </template>
+   <template id="brand_promotion_message" name="Brand Promotion Message">
+    <t t-set="final_message">Powered by <span>Skoola</span></t>
+    <t t-out="final_message"/>
+</template>
     <template id="brand_promotion" name="Brand Promotion">
         <div class="o_brand_promotion">
             <t t-call="web.brand_promotion_message">
@@ -118,14 +106,14 @@
                 <div t-attf-class="card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list" style="max-width: 300px;">
                     <div class="card-body">
                         <div class="text-center pb-3 border-bottom mb-4">
-                            <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
+                            <img src="/web/static/img/logo.png" style="max-height:120px; max-width: 100%; width:auto"/>
                         </div>
                         <t t-out="0"/>
                         <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
                             <t t-if="not disable_database_manager">
                                 <a class="border-end pe-2 me-1" href="/web/database/manager">Manage Databases</a>
                             </t>
-                            <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Odoo</span></a>
+                            <a href="https://www.odoo.com?utm_source=db&amp;utm_medium=auth" target="_blank">Powered by <span>Skoola</span></a>
                         </div>
                     </div>
                 </div>
@@ -276,7 +264,7 @@
         <t t-call="web.layout">
             <t t-set="head_web">
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-                <meta name="theme-color" content="#71639e"/>
+                <meta name="theme-color" content="#19387A"/>
                 <link rel="manifest" href="/web/manifest.webmanifest" crossorigin="use-credentials"/>
                 <link rel="apple-touch-icon" href="/web/static/img/odoo-icon-ios.png"/>
                 <script type="text/javascript">
@@ -349,9 +337,9 @@
                     filter: grayscale(.6);
                     }
                     .card button {
-                    background-color: #714B67;
+                    background-color: #19387A;
                     color: #FFFFFF;
-                    border: 1px solid #714B67;
+                    border: 1px solid #19387A;
                     border-radius: .25rem;
                     padding: .5rem 1rem;
                     cursor: pointer;

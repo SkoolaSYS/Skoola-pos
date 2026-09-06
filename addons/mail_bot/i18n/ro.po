@@ -158,8 +158,8 @@ msgstr "Stare OdooBot"
 
 #. module: mail_bot
 #: model:ir.model.fields,field_description:mail_bot.field_res_users__odoobot_failed
-msgid "Odoobot Failed"
-msgstr "Odoobot nu a reușit"
+msgid "OdooBot Failed"
+msgstr "OdooBot nu a reușit"
 
 #. module: mail_bot
 #: model:ir.model.fields.selection,name:mail_bot.selection__res_users__odoobot_state__onboarding_attachement
